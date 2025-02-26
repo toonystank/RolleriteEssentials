@@ -49,18 +49,18 @@ public class TpaCommand extends BaseModule {
     @Override
     public void execute(Player player, String[] args) {
         if (args.length < 1) {
-            player.sendMessage("&cUsage: /tpa <player>");
+            LanguageConfig.builder().buildAndSend("&cUsage: /tpa <player>",player,true);
             return;
         }
 
         Player targetPlayer = player.getServer().getPlayer(args[0]);
         if (targetPlayer == null) {
-            player.sendMessage(getPlugin().getMainConfig().getLanguageConfig().getPlayerNotFound());
+            LanguageConfig.builder().buildAndSend(getPlugin().getMainConfig().getLanguageConfig().getPlayerNotFound(),player,true);
             return;
         }
 
         if (player.equals(targetPlayer)) {
-            player.sendMessage(selfRequestMessage);
+            LanguageConfig.builder().buildAndSend(selfRequestMessage,player,true);
             return;
         }
 

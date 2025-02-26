@@ -21,7 +21,7 @@ public final class RolleriteEssentials extends JavaPlugin {
     public void onEnable() {
         instance = this;
         setMainConfig();
-        moduleManager = new ModuleManager();
+        moduleManager = new ModuleManager(this);
         setModules();
     }
     public void setMainConfig() {

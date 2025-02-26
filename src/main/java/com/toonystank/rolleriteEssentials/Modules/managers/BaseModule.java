@@ -13,7 +13,6 @@ public abstract class BaseModule extends BaseCommand {
     private final String name;
     private LanguageConfig languageConfig;
 
-
     public BaseModule(RolleriteEssentials plugin, String name, BaseCommand.Command command) {
         super(plugin,command);
         this.name = name;

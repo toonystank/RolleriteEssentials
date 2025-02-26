@@ -78,7 +78,9 @@ public class LanguageConfig extends FileConfig {
         }
         public String buildAndSend(String template, CommandSender player, boolean includePrefix) {
             String replaced = build(template);
-            replaced = RolleriteEssentials.getInstance().getMainConfig().getLanguageConfig().getPrefix() + replaced;
+            if (includePrefix) {
+                replaced = RolleriteEssentials.getInstance().getMainConfig().getLanguageConfig().getPrefix() + replaced;
+            }
             MessageUtils.sendMessage(player,replaced);
             return replaced;
         }
