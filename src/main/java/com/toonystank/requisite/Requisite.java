@@ -1,19 +1,19 @@
-package com.toonystank.rolleriteEssentials;
+package com.toonystank.requisite;
 
-import com.toonystank.rolleriteEssentials.Modules.*;
-import com.toonystank.rolleriteEssentials.Modules.managers.ModuleManager;
-import com.toonystank.rolleriteEssentials.utils.MainConfig;
-import com.toonystank.rolleriteEssentials.utils.MessageUtils;
+import com.toonystank.requisite.Modules.*;
+import com.toonystank.requisite.Modules.managers.ModuleManager;
+import com.toonystank.requisite.utils.MainConfig;
+import com.toonystank.requisite.utils.MessageUtils;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
 
 @Getter
-public final class RolleriteEssentials extends JavaPlugin {
+public final class Requisite extends JavaPlugin {
 
     @Getter
-    private static RolleriteEssentials instance;
+    private static Requisite instance;
     private MainConfig mainConfig;
     private ModuleManager moduleManager;
 

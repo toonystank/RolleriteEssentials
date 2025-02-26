@@ -1,8 +1,8 @@
-package com.toonystank.rolleriteEssentials.Modules;
+package com.toonystank.requisite.Modules;
 
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseModule;
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
+import com.toonystank.requisite.Modules.managers.BaseModule;
+import com.toonystank.requisite.Requisite;
+import com.toonystank.requisite.utils.LanguageConfig;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
@@ -15,7 +15,7 @@ public class ReloadCommand extends BaseModule {
     private String reloadMessage = "Plugin reloaded successfully.";
 
 
-    public ReloadCommand(RolleriteEssentials plugin) {
+    public ReloadCommand(Requisite plugin) {
         super(plugin, "rolleritereload", new Command("rolleritereload",
                 false,
                 false,

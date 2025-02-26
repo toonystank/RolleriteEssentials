@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.toonystank</groupId>
-    <artifactId>RolleriteEssentials</artifactId>
+    <artifactId>Requisite</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>RolleriteEssentials</name>
+    <name>Requisite</name>
 
     <properties>
         <java.version>21</java.version>
@@ -44,7 +44,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>de.themoep.minedown</pattern>
-                                    <shadedPattern>com.toonystank.rolleriteEssentials.utils.minedown</shadedPattern>
+                                    <shadedPattern>com.toonystank.requisite.utils.minedown</shadedPattern>
                                 </relocation>
                             </relocations>
                             <filters>

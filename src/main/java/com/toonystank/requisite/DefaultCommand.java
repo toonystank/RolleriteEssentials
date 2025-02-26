@@ -1,8 +1,8 @@
-package com.toonystank.rolleriteEssentials;
+package com.toonystank.requisite;
 
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseCommand;
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseModule;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
+import com.toonystank.requisite.Modules.managers.BaseCommand;
+import com.toonystank.requisite.Modules.managers.BaseModule;
+import com.toonystank.requisite.utils.LanguageConfig;
 import lombok.Getter;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
@@ -15,7 +15,7 @@ public class DefaultCommand extends BaseCommand {
 
     private final Map<String, BaseModule> subCommands = new HashMap<>();
 
-    public DefaultCommand(RolleriteEssentials plugin, String name) {
+    public DefaultCommand(Requisite plugin, String name) {
         super(plugin, name, false, false, "Main command for Rollerite Essentials", "/" + name + " <subcommand>", "RolleriteEssentials.use", List.of("re","essentials","rollerite"));
         subCommands.put("help",null);
     }

@@ -1,5 +1,5 @@
-name: RolleriteEssentials
+name: Requisite
 version: '1.0'
-main: com.toonystank.rolleriteEssentials.RolleriteEssentials
+main: com.toonystank.requisite.Requisite
 api-version: '1.21'
 authors: [ Edward ]

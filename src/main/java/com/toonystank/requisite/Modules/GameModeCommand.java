@@ -1,8 +1,8 @@
-package com.toonystank.rolleriteEssentials.Modules;
+package com.toonystank.requisite.Modules;
 
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseModule;
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
+import com.toonystank.requisite.Modules.managers.BaseModule;
+import com.toonystank.requisite.Requisite;
+import com.toonystank.requisite.utils.LanguageConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.command.CommandSender;
@@ -21,7 +21,7 @@ public class GameModeCommand extends BaseModule {
     private String invalidGamemodeMessage;
     private String consoleUsageMessage;
 
-    public GameModeCommand(RolleriteEssentials plugin) {
+    public GameModeCommand(Requisite plugin) {
         super(plugin, "gamemode", new Command("gamemode",
                 false,
                 true,

@@ -1,8 +1,8 @@
-package com.toonystank.rolleriteEssentials.Modules.managers;
+package com.toonystank.requisite.Modules.managers;
 
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
-import com.toonystank.rolleriteEssentials.utils.MessageUtils;
+import com.toonystank.requisite.Requisite;
+import com.toonystank.requisite.utils.LanguageConfig;
+import com.toonystank.requisite.utils.MessageUtils;
 import lombok.Getter;
 
 import java.io.IOException;
@@ -13,7 +13,7 @@ public abstract class BaseModule extends BaseCommand {
     private final String name;
     private LanguageConfig languageConfig;
 
-    public BaseModule(RolleriteEssentials plugin, String name, BaseCommand.Command command) {
+    public BaseModule(Requisite plugin, String name, BaseCommand.Command command) {
         super(plugin,command);
         this.name = name;
         this.languageConfig = plugin.getMainConfig().getLanguageConfig();

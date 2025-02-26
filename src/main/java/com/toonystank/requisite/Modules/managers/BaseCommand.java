@@ -1,6 +1,6 @@
-package com.toonystank.rolleriteEssentials.Modules.managers;
+package com.toonystank.requisite.Modules.managers;
 
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
+import com.toonystank.requisite.Requisite;
 import lombok.Getter;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
@@ -16,7 +16,7 @@ import java.util.List;
 @SuppressWarnings("unused")
 public abstract class BaseCommand implements CommandExecutor,TabCompleter{
 
-    private final RolleriteEssentials plugin;
+    private final Requisite plugin;
     private final Command commandData;
     /**
      * Constructor to create a new command with specific properties.
@@ -30,7 +30,7 @@ public abstract class BaseCommand implements CommandExecutor,TabCompleter{
      * @param permission        The permission required to use the command.
      * @param aliases           A list of command aliases.
      */
-    protected BaseCommand(RolleriteEssentials plugin, String name, boolean playerOnlyCommand, boolean requireArgument, String description, String usage, String permission, List<String> aliases) {
+    protected BaseCommand(Requisite plugin, String name, boolean playerOnlyCommand, boolean requireArgument, String description, String usage, String permission, List<String> aliases) {
         this.plugin = plugin;
         this.commandData = new Command(name,playerOnlyCommand,requireArgument, description, usage, permission, aliases);
         registerCommand(commandData);
@@ -42,7 +42,7 @@ public abstract class BaseCommand implements CommandExecutor,TabCompleter{
      * @param plugin      The plugin instance.
      * @param commandData The command data containing properties of the command.
      */
-    protected BaseCommand(RolleriteEssentials plugin, Command commandData) {
+    protected BaseCommand(Requisite plugin, Command commandData) {
         this.plugin = plugin;
         this.commandData = commandData;
         registerCommand(commandData);

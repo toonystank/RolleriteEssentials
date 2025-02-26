@@ -1,8 +1,8 @@
-package com.toonystank.rolleriteEssentials.Modules;
+package com.toonystank.requisite.Modules;
 
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseModule;
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
+import com.toonystank.requisite.Modules.managers.BaseModule;
+import com.toonystank.requisite.Requisite;
+import com.toonystank.requisite.utils.LanguageConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
@@ -17,7 +17,7 @@ public class OpenInvCommand extends BaseModule {
     private String viewingInventoryMessage = "&aYou are now viewing {player}'s inventory.";
 
 
-    public OpenInvCommand(RolleriteEssentials plugin) {
+    public OpenInvCommand(Requisite plugin) {
         super(plugin, "openinv", new Command("openinv",
                 true,
                 true,

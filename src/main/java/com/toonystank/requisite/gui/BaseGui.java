@@ -1,6 +1,6 @@
-package com.toonystank.rolleriteEssentials.gui;
+package com.toonystank.requisite.gui;
 
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
+import com.toonystank.requisite.Requisite;
 import lombok.Getter;
 import lombok.Setter;
 import net.kyori.adventure.text.Component;
@@ -50,7 +50,7 @@ public abstract class BaseGui implements InventoryHolder {
     }
 
     private void setGuiListener() {
-        RolleriteEssentials plugin = RolleriteEssentials.getInstance();
+        Requisite plugin = Requisite.getInstance();
         this.listener = new GuiListener(this);
         plugin.getServer().getPluginManager().registerEvents(listener, plugin);
     }

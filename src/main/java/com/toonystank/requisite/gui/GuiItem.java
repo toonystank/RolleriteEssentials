@@ -1,6 +1,6 @@
-package com.toonystank.rolleriteEssentials.gui;
+package com.toonystank.requisite.gui;
 
-import com.toonystank.rolleriteEssentials.utils.NameSpace;
+import com.toonystank.requisite.utils.NameSpace;
 import lombok.Getter;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;

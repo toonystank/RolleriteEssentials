@@ -1,6 +1,6 @@
-package com.toonystank.rolleriteEssentials.utils;
+package com.toonystank.requisite.utils;
 
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
+import com.toonystank.requisite.Requisite;
 import org.bukkit.NamespacedKey;
 
 public class NameSpace {
@@ -13,11 +13,11 @@ public class NameSpace {
             this.key = s;
         }
         public NamespacedKey getKey() {
-            return new NamespacedKey(RolleriteEssentials.getInstance(), key);
+            return new NamespacedKey(Requisite.getInstance(), key);
         }
     }
 
     public static NamespacedKey getKey(String key) {
-        return new NamespacedKey(RolleriteEssentials.getInstance(), key);
+        return new NamespacedKey(Requisite.getInstance(), key);
     }
 }

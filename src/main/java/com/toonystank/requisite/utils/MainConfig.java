@@ -1,4 +1,4 @@
-package com.toonystank.rolleriteEssentials.utils;
+package com.toonystank.requisite.utils;
 
 import lombok.Getter;
 

@@ -1,8 +1,8 @@
-package com.toonystank.rolleriteEssentials.Modules;
+package com.toonystank.requisite.Modules;
 
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseModule;
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
+import com.toonystank.requisite.Modules.managers.BaseModule;
+import com.toonystank.requisite.Requisite;
+import com.toonystank.requisite.utils.LanguageConfig;
 import lombok.Getter;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
@@ -23,7 +23,7 @@ public class TpaCommand extends BaseModule {
 
     private final Map<Player, List<Player>> teleportRequests = new HashMap<>();
 
-    public TpaCommand(RolleriteEssentials plugin) {
+    public TpaCommand(Requisite plugin) {
         super(plugin, "tpa", new Command("tpa",
                 false,
                 true,
@@ -111,7 +111,7 @@ public class TpaCommand extends BaseModule {
 
 class TpAcceptCommand extends BaseModule {
 
-    protected TpAcceptCommand(RolleriteEssentials plugin, TpaCommand tpaCommand) {
+    protected TpAcceptCommand(Requisite plugin, TpaCommand tpaCommand) {
         super(plugin, "tpaccept", new Command("tpaccept",
                 false,
                 false,
@@ -157,7 +157,7 @@ class TpAcceptCommand extends BaseModule {
 
 class TpDenyCommand extends BaseModule {
 
-    protected TpDenyCommand(RolleriteEssentials plugin, TpaCommand tpaCommand) {
+    protected TpDenyCommand(Requisite plugin, TpaCommand tpaCommand) {
         super(plugin, "tpdeny", new Command("tpdeny",
                 false,
                 false,

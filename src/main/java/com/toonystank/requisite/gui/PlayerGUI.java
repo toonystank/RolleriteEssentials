@@ -1,4 +1,4 @@
-package com.toonystank.rolleriteEssentials.gui;
+package com.toonystank.requisite.gui;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.event.inventory.InventoryType;

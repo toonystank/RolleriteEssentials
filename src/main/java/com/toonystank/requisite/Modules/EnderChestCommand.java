@@ -1,8 +1,8 @@
-package com.toonystank.rolleriteEssentials.Modules;
+package com.toonystank.requisite.Modules;
 
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseModule;
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
+import com.toonystank.requisite.Modules.managers.BaseModule;
+import com.toonystank.requisite.Requisite;
+import com.toonystank.requisite.utils.LanguageConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
@@ -16,7 +16,7 @@ public class EnderChestCommand extends BaseModule {
 
     private String openedEnderChestMessage = "Opened {player}'s ender chest.";
 
-    public EnderChestCommand(RolleriteEssentials plugin) {
+    public EnderChestCommand(Requisite plugin) {
         super(plugin, "enderchest", new Command("enderchest",
                 false,
                 false,

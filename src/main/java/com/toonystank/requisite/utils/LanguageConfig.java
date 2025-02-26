@@ -1,6 +1,6 @@
-package com.toonystank.rolleriteEssentials.utils;
+package com.toonystank.requisite.utils;
 
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
+import com.toonystank.requisite.Requisite;
 import lombok.Getter;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.Nullable;
@@ -79,7 +79,7 @@ public class LanguageConfig extends FileConfig {
         public String buildAndSend(String template, CommandSender player, boolean includePrefix) {
             String replaced = build(template);
             if (includePrefix) {
-                replaced = RolleriteEssentials.getInstance().getMainConfig().getLanguageConfig().getPrefix() + replaced;
+                replaced = Requisite.getInstance().getMainConfig().getLanguageConfig().getPrefix() + replaced;
             }
             MessageUtils.sendMessage(player,replaced);
             return replaced;

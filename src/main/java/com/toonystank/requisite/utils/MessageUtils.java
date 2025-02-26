@@ -1,6 +1,6 @@
-package com.toonystank.rolleriteEssentials.utils;
+package com.toonystank.requisite.utils;
 
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
+import com.toonystank.requisite.Requisite;
 import de.themoep.minedown.adventure.MineDown;
 import net.kyori.adventure.audience.Audience;
 import net.kyori.adventure.text.Component;
@@ -69,7 +69,7 @@ public class MessageUtils {
     }
     public static void sendMessage(CommandSender sender, String message) {
         MessageUtils.toConsole(message  + "  sending to player " + sender ,true );
-        if (RolleriteEssentials.getInstance().getMainConfig().isSmallText()) {
+        if (Requisite.getInstance().getMainConfig().isSmallText()) {
             message = SmallLetterConvertor.convert(message);
         }
         Component component = new MineDown(message).toComponent();
@@ -115,7 +115,7 @@ public class MessageUtils {
     }
     public static void toConsole(String message, boolean debug) {
         if (debug) {
-            if (!RolleriteEssentials.getInstance().getMainConfig().isDebug()) return;
+            if (!Requisite.getInstance().getMainConfig().isDebug()) return;
         }
         message = "&a[RolleriteEssentials]&r " + message;
         Component component = new MineDown(message).toComponent();
@@ -123,13 +123,13 @@ public class MessageUtils {
     }
     public static void toConsole(Component component, boolean debug) {
         if (debug) {
-            if (!RolleriteEssentials.getInstance().getMainConfig().isDebug()) return;
+            if (!Requisite.getInstance().getMainConfig().isDebug()) return;
         }
         component = component.decoration(TextDecoration.ITALIC,false);
-        Audience.audience(RolleriteEssentials.getInstance().getServer().getConsoleSender()).sendMessage(component);
+        Audience.audience(Requisite.getInstance().getServer().getConsoleSender()).sendMessage(component);
     }
     public static void error(String message) {
-        message = message + ". Server version: " + RolleriteEssentials.getInstance().getServer().getVersion() + ". Plugin version: " + RolleriteEssentials.getInstance().getDescription().getVersion() + ". Please report this error to the plugin developer.";
+        message = message + ". Server version: " + Requisite.getInstance().getServer().getVersion() + ". Plugin version: " + Requisite.getInstance().getDescription().getVersion() + ". Please report this error to the plugin developer.";
         message = "[RolleriteEssentials] " + message;
         Component component = new MineDown(message).toComponent();
         error(component);
@@ -138,21 +138,21 @@ public class MessageUtils {
         try {
             component = component.decoration(TextDecoration.ITALIC, false);
             component = component.color(TextColor.fromHexString("#CF203E"));
-            Audience.audience(RolleriteEssentials.getInstance().getServer().getConsoleSender()).sendMessage(component);
+            Audience.audience(Requisite.getInstance().getServer().getConsoleSender()).sendMessage(component);
         } catch (NullPointerException ignored) {
             error("an error occurred while sending a message");
         }
     }
     public static void debug(String message) {
-        if (!RolleriteEssentials.getInstance().getMainConfig().isDebug()) return;
-        message = message + ". Server version: " + RolleriteEssentials.getInstance().getServer().getVersion() + ". Plugin version: " + RolleriteEssentials.getInstance().getDescription().getVersion() + ". To stop receiving this messages please update your config.yml";
+        if (!Requisite.getInstance().getMainConfig().isDebug()) return;
+        message = message + ". Server version: " + Requisite.getInstance().getServer().getVersion() + ". Plugin version: " + Requisite.getInstance().getDescription().getVersion() + ". To stop receiving this messages please update your config.yml";
         Component component = new MineDown(message).toComponent();
         debug(component);
     }
     public static void debug(Component component) {
         try {
             component = component.decoration(TextDecoration.ITALIC, false);
-            Audience.audience(RolleriteEssentials.getInstance().getServer().getConsoleSender()).sendMessage(component);
+            Audience.audience(Requisite.getInstance().getServer().getConsoleSender()).sendMessage(component);
         } catch (NullPointerException ignored) {
             error("an error occurred while sending a message");
         }
@@ -165,7 +165,7 @@ public class MessageUtils {
     public static void warning(Component component) {
         component = component.decoration(TextDecoration.ITALIC,false);
         component = component.color(TextColor.fromHexString("#FFC107"));
-        Audience.audience(RolleriteEssentials.getInstance().getServer().getConsoleSender()).sendMessage(component);
+        Audience.audience(Requisite.getInstance().getServer().getConsoleSender()).sendMessage(component);
     }
     public static String replaceGrayWithWhite(String inputString) {
         if (inputString.contains("&7")) inputString = inputString.replace("&7", "&f");

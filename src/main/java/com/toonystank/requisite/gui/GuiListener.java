@@ -1,4 +1,4 @@
-package com.toonystank.rolleriteEssentials.gui;
+package com.toonystank.requisite.gui;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

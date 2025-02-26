@@ -1,7 +1,7 @@
-package com.toonystank.rolleriteEssentials.Modules.managers;
+package com.toonystank.requisite.Modules.managers;
 
-import com.toonystank.rolleriteEssentials.DefaultCommand;
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
+import com.toonystank.requisite.DefaultCommand;
+import com.toonystank.requisite.Requisite;
 import lombok.Getter;
 
 import java.util.HashMap;
@@ -13,7 +13,7 @@ public class ModuleManager {
     private final Map<String, BaseModule> modules = new HashMap<>();
     private final DefaultCommand defaultCommand;
 
-    public ModuleManager(RolleriteEssentials plugin) {
+    public ModuleManager(Requisite plugin) {
         this.defaultCommand = new DefaultCommand(plugin,"RolleriteEssentials");
     }
 

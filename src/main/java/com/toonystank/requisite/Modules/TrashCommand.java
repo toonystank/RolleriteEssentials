@@ -1,10 +1,10 @@
-package com.toonystank.rolleriteEssentials.Modules;
+package com.toonystank.requisite.Modules;
 
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseModule;
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
-import com.toonystank.rolleriteEssentials.gui.PlayerGUI;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
-import com.toonystank.rolleriteEssentials.utils.MessageUtils;
+import com.toonystank.requisite.Modules.managers.BaseModule;
+import com.toonystank.requisite.Requisite;
+import com.toonystank.requisite.gui.PlayerGUI;
+import com.toonystank.requisite.utils.LanguageConfig;
+import com.toonystank.requisite.utils.MessageUtils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
@@ -17,7 +17,7 @@ public class TrashCommand extends BaseModule {
     private String trashTitle = "Trash Can";
     private String trashCanMessage = "Opening the trash can. Anything you put in here will be deleted.";
 
-    public TrashCommand(RolleriteEssentials plugin) {
+    public TrashCommand(Requisite plugin) {
         super(plugin, "trash", new Command("trash",
                 false,
                 false,

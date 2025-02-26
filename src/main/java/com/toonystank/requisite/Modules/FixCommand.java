@@ -1,8 +1,8 @@
-package com.toonystank.rolleriteEssentials.Modules;
+package com.toonystank.requisite.Modules;
 
-import com.toonystank.rolleriteEssentials.Modules.managers.BaseModule;
-import com.toonystank.rolleriteEssentials.RolleriteEssentials;
-import com.toonystank.rolleriteEssentials.utils.LanguageConfig;
+import com.toonystank.requisite.Modules.managers.BaseModule;
+import com.toonystank.requisite.Requisite;
+import com.toonystank.requisite.utils.LanguageConfig;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
@@ -18,7 +18,7 @@ public class FixCommand extends BaseModule {
     private String noItemInHandMessage;
     private String notRepairableMessage;
 
-    public FixCommand(RolleriteEssentials plugin) {
+    public FixCommand(Requisite plugin) {
         super(plugin, "fix", new Command("fix"
                 ,true
                 , false
